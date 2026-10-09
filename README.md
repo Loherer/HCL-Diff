@@ -194,3 +194,11 @@ The output reports the paired mean difference, patient-clustered bootstrap confi
 ## Scope
 
 This repository implements the methods required for the C0-to-C1-to-C2 comparison and the associated multi-backbone lesion segmentation study. Activity classification, global 3D shape generation, utility prediction, and unrelated exploratory branches are outside this codebase.
+
+## Data availability
+
+The clinical CT images and lesion annotations are not publicly available because they contain sensitive medical information and are governed by institutional and ethical restrictions. Reasonable research enquiries may be directed to **18737754346@163.com**. Any access request is subject to approval by the participating institutions, applicable ethics requirements, and a formal data-use agreement.
+
+## License
+
+The source code is released under the [Apache License 2.0](LICENSE). The license applies to the software in this repository and does not grant access to, or rights over, the clinical data, annotations, model weights, or third-party datasets.
