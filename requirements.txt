@@ -1,0 +1,9 @@
+numpy
+pandas
+PyYAML
+scipy
+scikit-image
+torch
+dynamic-network-architectures
+monai
+

@@ -1,0 +1,35 @@
+project:
+  seed: null
+  output_dir: null
+
+data:
+  train_manifest: null
+  validation_manifest: null
+  workers: null
+
+model:
+  variant: C2
+  base_channels: null
+  channel_multipliers: null
+  attention_heads: null
+  time_embedding_multiplier: null
+  gradient_checkpointing: null
+
+diffusion:
+  timesteps: null
+  cosine_offset: null
+  sampling_steps: null
+
+training:
+  optimizer: null
+  scheduler: null
+  scheduler_power: null
+  learning_rate: null
+  weight_decay: null
+  batch_size_by_roi: null
+  gradient_accumulation: null
+  total_steps: null
+  checkpoint_interval: null
+  mixed_precision: null
+  background_noise_weight: null
+  slice_difference_weight: null

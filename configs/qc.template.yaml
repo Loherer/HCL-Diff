@@ -1,0 +1,15 @@
+thresholds:
+  mask_dice_min: null
+  boundary_dice_min: null
+  hd95_max: null
+  outside_mask_fraction_max: null
+  lesion_mae_max: null
+  lesion_ssim_min: null
+  background_mae_max: null
+  background_max_abs_error_max: null
+  slice_difference_error_max: null
+  wall_gradient_error_max: null
+  seam_error_max: null
+  memory_feature_similarity_max: null
+  memory_lesion_ssim_max: null
+
