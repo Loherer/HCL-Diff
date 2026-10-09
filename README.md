@@ -164,41 +164,14 @@ python scripts\evaluate_segmenter.py \
 
 The evaluation output contains 3D Dice, normalized surface Dice, HD95, empty prediction and complete miss flags, predicted and target volume, and absolute and relative volume errors. Surfaces are extracted with 26-neighbour connectivity. If both masks are empty, NSD is 1 and HD95 is 0. If only one mask is empty, NSD is 0 and HD95 is set to the physical diagonal of the evaluated volume. Complete misses are therefore retained in every summary rather than dropped as missing observations.
 
-## Paired statistical analysis
-
-Method comparisons use the patient as the resampling and pairing unit:
-
-```bash
-python scripts\compare_methods.py \
-  --metrics PATH_TO_PATIENT_METRICS \
-  --method-column group \
-  --patient-column case_id \
-  --value-column merged_dice \
-  --comparisons G4:G3 G5:G4 G5:G2 G5:G0 \
-  --bootstrap-iterations N \
-  --seed SEED \
-  --output PATH_TO_COMPARISON_TABLE
-```
-
-The output reports the paired mean difference, patient-clustered bootstrap confidence interval, paired Wilcoxon p-value, Holm-adjusted p-value, and the number of complete patient pairs.
-
-## Reproducibility rules
-
-- Split patients before generating any triplets, target masks, or synthetic images.
-- Keep validation and test patients out of generator training, QC calibration, and downstream model selection.
-- Store the configuration, random seed, manifest hash, code revision, checkpoint hash, and command line for every run.
-- Use identical target masks, real backgrounds, candidate budgets, and sampling schedules for fixed-pair generator comparisons.
-- Select representative images with a prespecified rule rather than test performance.
-- Keep clinical images, annotations, checkpoints, and generated arrays outside version control.
-
 ## Scope
 
 This repository implements the methods required for the C0-to-C1-to-C2 comparison and the associated multi-backbone lesion segmentation study. Activity classification, global 3D shape generation, utility prediction, and unrelated exploratory branches are outside this codebase.
 
 ## Data availability
 
-The clinical CT images and lesion annotations are not publicly available because they contain sensitive medical information and are governed by institutional and ethical restrictions. Reasonable research enquiries may be directed to **18737754346@163.com**. Any access request is subject to approval by the participating institutions, applicable ethics requirements, and a formal data-use agreement.
+The clinical CT images and lesion annotations are not publicly available because they contain sensitive medical information and are governed by institutional and ethical restrictions. Reasonable research enquiries may be directed to **18737754346@163.com**.
 
 ## License
 
-The source code is released under the [Apache License 2.0](LICENSE). The license applies to the software in this repository and does not grant access to, or rights over, the clinical data, annotations, model weights, or third-party datasets.
+The source code is released under the [Apache License 2.0](LICENSE).
